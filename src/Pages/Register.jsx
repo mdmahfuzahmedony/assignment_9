@@ -2,11 +2,10 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../AuthContext/AuthContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router";
+import { toast } from "react-toastify"; // ✅ import Toast
 
 const Register = () => {
   const { createUser, signInWithGoogle } = useContext(AuthContext);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
@@ -14,54 +13,45 @@ const Register = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const name = e.target.name.value || "User"; // 🔹 Name from input
+    const name = e.target.name.value;
     const photoURL = e.target.PhotoURL.value;
     const checkbox = e.target.terms.checked;
 
-    // Password validation
-    const strongPasswordPattern =
-      /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-
-    if (!strongPasswordPattern.test(password)) {
-      setError(
-        "Password must be at least 8 characters, include uppercase, lowercase, number, and special character."
+    // ✅ Password validation
+    const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+    if (!passwordPattern.test(password)) {
+      toast.error(
+        "❌ Password must have at least one uppercase, one lowercase & 6 characters!"
       );
       return;
     }
 
     if (!checkbox) {
-      setError("Please accept our terms and conditions.");
+      toast.warn("⚠️ Please accept the terms and conditions!");
       return;
     }
 
-    setError("");
-    setSuccess(false);
-
+    // ✅ Create user in Firebase
     createUser(email, password, name, photoURL)
-      .then((res) => {
-        setSuccess(true);
-        if (res.user) {
-          res.user.sendEmailVerification().then(() => {
-            alert("Please verify your email address!");
-            navigate("/login"); // redirect after verification
-          });
-        }
+      .then(() => {
+        toast.success("🎉 Account Created Successfully!");
+        navigate("/login");
       })
-      .catch((err) => setError(err.message));
+      .catch((err) => {
+        toast.error(`❌ ${err.message}`);
+      });
   };
 
-  const handleTogglePassword = (e) => {
-    e.preventDefault();
-    setShowPassword(!showPassword);
-  };
-
+  // ✅ Google Login
   const handleGoogleLogin = () => {
     signInWithGoogle()
-      .then((res) => {
-        console.log("Google login success:", res.user);
+      .then(() => {
+        toast.success("🎉 Google Login Successful!");
         navigate("/home");
       })
-      .catch((err) => setError(err.message));
+      .catch((err) => {
+        toast.error(`❌ ${err.message}`);
+      });
   };
 
   return (
@@ -73,18 +63,17 @@ const Register = () => {
               Register <span className="text-blue-700">now!</span>
             </h1>
             <p className="py-6">
-              Create your account and start exploring all our toys. Please fill all details.and see all our toy
+              Create your account and start exploring all our toys.
             </p>
           </div>
 
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
             <div className="card-body">
               <form onSubmit={formHandle}>
-                {/* 🔹 Name Field */}
                 <label className="label">Name</label>
                 <input
                   type="text"
-                  className="input"
+                  className="input input-bordered"
                   name="name"
                   placeholder="Your Name"
                   required
@@ -93,18 +82,18 @@ const Register = () => {
                 <label className="label">Email</label>
                 <input
                   type="email"
-                  className="input"
+                  className="input input-bordered"
                   name="email"
                   placeholder="Email"
                   required
                 />
 
-                <label className="label">PhotoURL</label>
+                <label className="label">Photo URL</label>
                 <input
                   type="text"
-                  className="input"
+                  className="input input-bordered"
                   name="PhotoURL"
-                  placeholder="PhotoURL"
+                  placeholder="Photo URL"
                   required
                 />
 
@@ -112,45 +101,35 @@ const Register = () => {
                 <div className="relative">
                   <input
                     type={showPassword ? "text" : "password"}
-                    className="input"
+                    className="input input-bordered w-full"
                     name="password"
                     placeholder="Password"
                     required
                   />
                   <button
-                    onClick={handleTogglePassword}
-                    className="absolute top-3 right-6"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setShowPassword(!showPassword);
+                    }}
+                    className="absolute top-3 right-5"
                   >
                     {showPassword ? <FaEyeSlash /> : <FaEye />}
                   </button>
                 </div>
 
-                <label className="label mt-2">
-                  <input
-                    type="checkbox"
-                    defaultChecked
-                    className="checkbox"
-                    name="terms"
-                  />
+                <label className="label mt-2 flex items-center gap-2">
+                  <input type="checkbox" className="checkbox" name="terms" />
                   Accept terms and conditions
                 </label>
 
-                <button className="btn bg-blue-500 btn-neutral mt-4 w-full">
+                <button className="btn bg-blue-500 text-white w-full mt-4">
                   Register
                 </button>
-
-                {success && (
-                  <p className="text-green-500 mt-2">
-                    Account created successfully! Please verify your email.
-                  </p>
-                )}
-                {error && <p className="text-red-600 mt-2">{error}</p>}
               </form>
 
-              {/* 🔹 Google Login */}
               <button
                 onClick={handleGoogleLogin}
-                className="btn btn-outline border-none mt-4 w-full flex items-center justify-center gap-2"
+                className="btn btn-outline mt-4 w-full flex items-center justify-center gap-2"
               >
                 <img
                   src="https://www.svgrepo.com/show/475656/google-color.svg"
