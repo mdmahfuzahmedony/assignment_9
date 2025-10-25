@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../Component/Custom.css";
 import AllToys from "./AllToys";
 import useToyproduct from "../Hook/useToyProduct";
@@ -9,33 +9,49 @@ const AllToy = () => {
   }, []);
 
   const { toyP, loading } = useToyproduct();
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredToys, setFilteredToys] = useState([]);
+
+  useEffect(() => {
+    setFilteredToys(toyP);
+  }, [toyP]);
+
+  const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearchTerm(value);
+
+    const filtered = toyP.filter(
+      (toy) => toy.toyName && toy.toyName.toLowerCase().includes(value)
+    );
+    setFilteredToys(filtered);
+  };
+
   if (loading) {
     return (
-      <h1 className="text-center text-xl font-semibold mt-20">Loading...</h1>
+      <h1 className="text-center text-xl font-semibold mt-20 text-white">
+        Loading...
+      </h1>
     );
   }
 
   return (
-    <div className="text-center px-4 ">
-
-
-
+    <div className="text-center px-4">
       <h1 className="text-[40px] font-bold text-white mt-10">Our All Toys</h1>
       <p className="text-[18px] font-light text-gray-400 mt-2">
         Explore all the Toy
       </p>
 
-
-      <div className="flex flex-col md:flex-row justify-between  items-center gap-4 mt-8 max-w-[1300px] mx-auto">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8 max-w-[1300px] mx-auto">
         <p className="text-white font-medium">
-          <span className="text-white">({toyP.length})</span> Toy Found
+          <span className="text-white">({filteredToys.length})</span> Toy Found
         </p>
 
-        <div className="relative w-full border-red-300 border-1 rounded-lg  md:w-80 max-w-[1300px]">
+        <div className="relative w-full border-red-300 border-1 rounded-lg md:w-80 max-w-[1300px]">
           <input
             type="search"
-            placeholder="Search App..."
-
+            value={searchTerm}
+            onChange={handleSearch}
+            placeholder="Search by Toy Name..."
             className="w-full text-white py-2 pl-10 pr-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
           />
           <svg
@@ -57,9 +73,14 @@ const AllToy = () => {
         </div>
       </div>
 
-
-      <div className="mt-10 ">
-        <AllToys key={toyP.toyId} toy={toyP}></AllToys>
+      <div className="mt-10">
+        {filteredToys.length > 0 ? (
+          <AllToys toy={filteredToys}></AllToys>
+        ) : (
+          <h2 className="text-center text-red-400 font-semibold text-xl mt-10">
+             No toys found matching
+          </h2>
+        )}
       </div>
     </div>
   );

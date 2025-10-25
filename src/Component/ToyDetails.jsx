@@ -1,16 +1,16 @@
-import React from "react";
-import { useParams } from "react-router"; // ✅ URL থেকে id ধরার জন্য
+import React, { useState } from "react";
+import { useParams } from "react-router";
 import useToyproduct from "../Hook/useToyProduct";
 
 const ToyDetails = () => {
   const { toyP, loading } = useToyproduct();
-  const { id } = useParams(); 
+  const { id } = useParams();
+  const [userRating, setUserRating] = useState(0); // ⭐ user rating state
 
   if (loading) {
     return <h1>Loading......</h1>;
   }
 
-  // ✅ এখানে সঠিকভাবে compare করা হয়েছে
   const singleToy = toyP.find((toyItem) => String(toyItem.toyId) === id);
 
   if (!singleToy) {
@@ -27,11 +27,16 @@ const ToyDetails = () => {
     pictureURL,
   } = singleToy;
 
+  // ⭐ rating click handler
+  const handleRating = (value) => {
+    setUserRating(value);
+    console.log(`You rated ${toyName} with ${value} stars`);
+    // future: here you can update Firebase or backend
+  };
+
   return (
     <div className="p-6">
-      {/* ---------- Toy Info Section ---------- */}
       <div className="flex flex-col md:flex-row">
-        {/* Left Image */}
         <div className="flex flex-1 justify-center items-center">
           <img
             src={pictureURL}
@@ -40,24 +45,53 @@ const ToyDetails = () => {
           />
         </div>
 
-        {/* Right Info */}
         <div className="flex-1 p-4">
           <h1 className="text-[30px] font-bold text-white">{toyName}</h1>
+
           <p className="mt-2 text-white font-semibold">
             Quantity: <span className="text-blue-500">{availableQuantity}</span>
           </p>
+
           <p className="mt-4 text-white font-semibold">
             Price: <span className="text-blue-500">{price}</span>
           </p>
+
           <p className="mt-4 text-white font-semibold">
-            Rating: <span className="text-blue-500">{rating}</span>
+            Current Rating: <span className="text-blue-500">{rating}</span>
           </p>
+
           <p className="mt-4 text-white font-semibold">
             Seller: <span className="text-blue-500">{sellerName}</span>
           </p>
+
           <p className="mt-4 text-gray-300">{description}</p>
 
-          <div className="flex justify-start mt-4">
+          {/* ⭐ Rating system start */}
+          <div className="mt-5">
+            <h3 className="text-white font-semibold">Rate this toy:</h3>
+            <div className="flex items-center gap-1 mt-2">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <span
+                  key={star}
+                  onClick={() => handleRating(star)}
+                  className={`cursor-pointer text-2xl transition-all ${
+                    star <= userRating ? "text-yellow-400" : "text-gray-400"
+                  }`}
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+            <p className="mt-2 text-white">
+              Your Rating:{" "}
+              <span className="text-blue-400">
+                {userRating > 0 ? userRating : "Not rated yet"}
+              </span>
+            </p>
+          </div>
+          {/* ⭐ Rating system end */}
+
+          <div className="flex justify-start mt-6">
             <button className="py-3 px-5 bg-blue-600 text-[15px] font-semibold rounded-[10px]">
               Add to Cart
             </button>
@@ -65,7 +99,6 @@ const ToyDetails = () => {
         </div>
       </div>
 
-      {/* Description Section */}
       <div className="mt-20 max-w-[1300px] mx-auto">
         <h1 className="text-[25px] font-bold text-white">Description</h1>
         <p className="mt-5 text-gray-200">{description}</p>
