@@ -22,19 +22,19 @@ const Footer = () => {
               Toy varse System A/S, DK-7190 Billund, Denmark. Must be 18 years or older to purchase online.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 hover:text-blue-600">
+              <a href="https://www.facebook.com/" className="text-gray-500 hover:text-blue-600">
                 <FaFacebookF className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-500 hover:text-blue-400">
+              <a href="https://x.com/MahfuzAhmedOny" className="text-gray-500 hover:text-blue-400">
                 <FaTwitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-500 hover:text-pink-600">
+              <a href="https://www.instagram.com/mahfuzahmedony/" className="text-gray-500 hover:text-pink-600">
                 <FaInstagram className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-500 hover:text-blue-700">
                 <FaLinkedinIn className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-500 hover:text-red-600">
+              <a href="https://www.youtube.com/@obogoto" className="text-gray-500 hover:text-red-600">
                 <FaYoutube className="w-5 h-5" />
               </a>
             </div>
