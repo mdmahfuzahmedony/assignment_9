@@ -73,7 +73,7 @@ const Register = () => {
               Register <span className="text-blue-700">now!</span>
             </h1>
             <p className="py-6">
-              Create your account and start exploring all our toys. Please fill all details.
+              Create your account and start exploring all our toys. Please fill all details.and see all our toy
             </p>
           </div>
 
