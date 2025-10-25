@@ -42,8 +42,8 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg text-gray-800 mb-4">About Us</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">About the Toy Land</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Compliance Line</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Privecy policy </a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">terms and conditions</a></li>
               <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land News</a></li>
               <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Sustainability</a></li>
               <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Supply Chain</a></li>
