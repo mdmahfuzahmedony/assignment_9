@@ -3,59 +3,56 @@ import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../AuthContext/AuthContext";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../Firebase/Firebase";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; // 👈 icons import
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify"; // ✅ Toastify import
 
 const Login = () => {
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState(false);
-  const [showPassword, setShowPassword] = useState(false); // 👈 password toggle
+  const [showPassword, setShowPassword] = useState(false);
   const { signInUser, signInWithGoogle } = useContext(AuthContext);
   const emailRef = useRef(null);
   const navigate = useNavigate();
 
-  // Password toggle
+  // 👁 Password toggle
   const handleTogglePassword = (e) => {
     e.preventDefault();
     setShowPassword(!showPassword);
   };
 
-  // Email/Password login
+  // 📩 Email/Password Login
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    setError("");
-    setSuccess(false);
-
     signInUser(email, password)
       .then(() => {
-        setSuccess(true);
+        toast.success("🎉 Login successful!");
         navigate("/home");
       })
-      .catch((err) => setError(err.message));
+      .catch((err) => toast.error(`❌ ${err.message}`));
   };
 
-  // Google login
+  // 🔑 Google Login
   const handleGoogleLogin = () => {
     signInWithGoogle()
-      .then((res) => {
-        console.log("Google login success:", res.user);
+      .then(() => {
+        toast.success("🎉 Logged in with Google!");
         navigate("/home");
       })
-      .catch((err) => setError(err.message));
+      .catch((err) => toast.error(`❌ ${err.message}`));
   };
 
-  // Forget password
+  // 🧠 Forget Password
   const handleForgetPassword = () => {
     const email = emailRef.current.value;
     if (!email) {
-      setError("Please enter your email first.");
+      toast.warn("⚠️ Please enter your email first!");
       return;
     }
+
     sendPasswordResetEmail(auth, email)
-      .then(() => alert("Please check your email to reset password"))
-      .catch((err) => setError(err.message));
+      .then(() => toast.info("📧 Check your email to reset password!"))
+      .catch((err) => toast.error(`❌ ${err.message}`));
   };
 
   return (
@@ -63,35 +60,40 @@ const Login = () => {
       <div>
         <form onSubmit={handleLogin}>
           <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 py-10">
-            <div className="text-center font-bold text-blue-700 text-[30px]">Login</div>
+            <div className="text-center font-bold text-blue-700 text-[30px]">
+              Login
+            </div>
 
+            {/* Email */}
             <label className="label">Email</label>
             <input
               type="email"
-              className="input"
+              className="input input-bordered w-full"
               name="email"
               ref={emailRef}
               placeholder="Email"
               required
             />
 
+            {/* Password */}
             <label className="label">Password</label>
             <div className="relative">
               <input
-                type={showPassword ? "text" : "password"} // 👈 toggle here
-                className="input"
+                type={showPassword ? "text" : "password"}
+                className="input input-bordered w-full"
                 name="password"
                 placeholder="Password"
                 required
               />
               <button
                 onClick={handleTogglePassword}
-                className=" absolute top-3 right-2"
+                className="absolute top-3 right-3"
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
 
+            {/* Forget Password */}
             <button
               type="button"
               onClick={handleForgetPassword}
@@ -100,29 +102,31 @@ const Login = () => {
               Forget Password?
             </button>
 
-            <button type="submit" className="btn bg-blue-500 btn-neutral mt-4 w-full">
+            {/* Login Button */}
+            <button
+              type="submit"
+              className="btn bg-blue-500 text-white mt-4 w-full"
+            >
               Login
             </button>
 
+            {/* Google Login */}
             <button
-                onClick={handleGoogleLogin}
-                className="btn btn-outline border-none mt-4 w-full flex items-center justify-center gap-2"
-              >
-                <img
-                  src="https://www.svgrepo.com/show/475656/google-color.svg"
-                  alt="Google"
-                  className="w-5 h-5"
-                />
-                Continue with Google
-              </button>
-            {success && (
-              <p className="text-green-600 mt-2">You successfully logged in!</p>
-            )}
-            {error && <p className="text-red-500 mt-2">{error}</p>}
+              type="button"
+              onClick={handleGoogleLogin}
+              className="btn btn-outline border-none mt-4 w-full flex items-center justify-center gap-2"
+            >
+              <img
+                src="https://www.svgrepo.com/show/475656/google-color.svg"
+                alt="Google"
+                className="w-5 h-5"
+              />
+              Continue with Google
+            </button>
           </fieldset>
         </form>
 
-        <p className="mt-4">
+        <p className="mt-4 text-center">
           New to our website?{" "}
           <Link to={"/register"} className="text-blue-500 underline">
             Register
