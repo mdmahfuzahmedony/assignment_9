@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
 
-              <span className="text-3xl font-black text-gray-800">Toy <span className="text-blue-700 ">varse</span></span>
+              <span className="text-3xl font-black text-gray-800">Toy <span className="text-blue-700 ">Land</span></span>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Toy varse System A/S, DK-7190 Billund, Denmark. Must be 18 years or older to purchase online.
@@ -42,9 +42,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg text-gray-800 mb-4">About Us</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">About the Toy varse</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">About the Toy Land</a></li>
               <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Compliance Line</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse News</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land News</a></li>
               <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Sustainability</a></li>
               <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Supply Chain</a></li>
             </ul>
@@ -65,22 +65,22 @@ const Footer = () => {
             <h4 className="font-semibold text-lg text-gray-800 mb-4">Attractions</h4>
        
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse House</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse land Parks</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land House</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land land Parks</a></li>
               <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Discovery Centers</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse Catalogs</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Find a Toy varse Store</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land Catalogs</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Find a Toy Land Store</a></li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold text-lg text-gray-800 mb-4">More from us</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse Education</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse Foundation</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land Education</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land Foundation</a></li>
               <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Affiliate Program</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse Braille Bricks</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse Life</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varse Ideas</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy varsLande Braille Bricks</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land Life</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm">Toy Land Ideas</a></li>
             </ul>
           </div>
         </div>

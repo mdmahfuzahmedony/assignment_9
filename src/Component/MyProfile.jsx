@@ -21,9 +21,9 @@ const MyProfile = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-10 ">
+    <div className="flex flex-col items-center mt-20 ">
 
-      <div className="border py-20 px-20 rounded-[40px] items-center">
+      <div className="border py-20 px-20 rounded-[40px] items-center ">
 <img
         src={user?.photoURL || "https://i.ibb.co/2d3K3Qv/default.png"}
         alt="Profile"

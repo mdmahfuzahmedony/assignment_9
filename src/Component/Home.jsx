@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className="main_container mx-auto px-4 sm:px-6 lg:px-8">
       {/* Featured Toys Slider */}
-      <div className="my-10 bg-gray-100 rounded-2xl shadow-md">
+      <div className="my-10 bg-gray-100 rounded-2xl mt-20 shadow-md">
         {toyP && toyP.length > 0 ? (
           <Swiper
             modules={[Autoplay]}

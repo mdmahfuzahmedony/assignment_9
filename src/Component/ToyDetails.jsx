@@ -89,12 +89,10 @@ const ToyDetails = () => {
               </span>
             </p>
           </div>
-          {/* ⭐ Rating system end */}
+
 
           <div className="flex justify-start mt-6">
-            <button className="py-3 px-5 bg-blue-600 text-[15px] font-semibold rounded-[10px]">
-              Add to Cart
-            </button>
+            
           </div>
         </div>
       </div>

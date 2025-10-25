@@ -36,14 +36,14 @@ const Header = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-400 rounded-box z-1 mt-2 w-52 p-2 shadow"
             >
               <li>
-                <NavLink to="/home">Home</NavLink>
+                <NavLink to="/home" className="text-[15px] ">Home</NavLink>
               </li>
               {user && (
                 <li>
-                  <NavLink to="/myprofile">My Profile</NavLink>
+                  <NavLink to="/myprofile" className="text-[15px]">My Profile</NavLink>
                 </li>
               )}
               {!user && (
