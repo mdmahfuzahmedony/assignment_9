@@ -58,8 +58,8 @@ const Header = () => {
               )}
             </ul>
           </div>
-          <NavLink to="/home" className="text-xl font-bold text-white">
-            ToyLand
+          <NavLink to="/home" className="text-[35px] font-bold ">
+            Toy <span className="text-blue-500">Land</span>
           </NavLink>
         </div>
         <div className="navbar-end gap-3">
@@ -70,7 +70,7 @@ const Header = () => {
                 <NavLink to="/home">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/alltoy">alltoy</NavLink>
+                <NavLink to="/alltoy">Alltoy</NavLink>
               </li>
 
               {user && (

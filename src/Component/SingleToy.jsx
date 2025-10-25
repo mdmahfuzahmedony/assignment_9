@@ -39,7 +39,7 @@ const SingleToy = ({ toy }) => {
           <div className="flex justify-center items-center ">
             <NavLink
               to={`/toys/${toyId}`}
-              className="py-2 px-4 w-full bg-blue-500 text-white rounded-b-2xl mt-5 text-center"
+              className="py-2 px-4 w-full bg-blue-500 text-white rounded=[30PX] mt-5 text-center"
             >
               View More
             </NavLink>
