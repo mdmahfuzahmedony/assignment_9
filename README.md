@@ -79,3 +79,41 @@ axios	API handling
 lucide-react	Clean modern icons
 tailwindcss	Styling
 daisyui	Pre-built UI components
+
+
+
+🛠️ 📌 How to Run the Project Locally
+
+Follow these steps to run Assignment_nine on your computer:
+
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/Assignment_nine.git
+
+2️⃣ Enter the Project Folder
+cd Assignment_nine
+
+3️⃣ Install Dependencies
+npm install
+
+4️⃣ Create Firebase Config File
+
+Create:
+
+src/firebase.config.js
+
+
+Paste your Firebase configuration:
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+export default app;
