@@ -5,9 +5,7 @@ const SingleToy = ({ toy }) => {
 
   return (
     <div>
-      <div
-        className=" shadow-md rounded-xl overflow-hidden py-2 px-3  transform transition-all duration-300 hover:scale-[1.04] hover:shadow-xl hover:-translate-y-1"
-      >
+      <div className=" shadow-md rounded-xl overflow-hidden py-2 px-3  transform transition-all duration-300 hover:scale-[1.04] hover:shadow-xl hover:-translate-y-1">
         <figure className="h-56">
           <img
             src={pictureURL}

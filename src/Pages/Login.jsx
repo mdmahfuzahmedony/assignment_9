@@ -42,11 +42,11 @@ const Login = () => {
       .catch((err) => toast.error(`❌ ${err.message}`));
   };
 
-  // 🧠 Forget Password
+ 
   const handleForgetPassword = () => {
     const email = emailRef.current.value;
     if (!email) {
-      toast.warn("⚠️ Please enter your email first!");
+      toast.warn("Please enter your email first!");
       return;
     }
 
