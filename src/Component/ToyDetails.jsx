@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router";
-import useToyproduct from "../Hook/temp";
+import useToyproduct from "../Hook/useToyProduct";
 
 const ToyDetails = () => {
   const { toyP, loading } = useToyproduct();

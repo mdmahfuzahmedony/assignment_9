@@ -1,6 +1,6 @@
 // import useToyproduct from "../Hook/useToyProduct";
 import { useEffect } from "react";
-import useToyproduct from "../Hook/temp";
+import useToyproduct from "../Hook/useToyProduct";
 import SingleToy from "./SingleToy";
 
 const HomeProduct = () => {

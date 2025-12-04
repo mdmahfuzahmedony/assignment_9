@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Component/Custom.css";
 import AllToys from "./AllToys";
-import useToyproduct from "../Hook/temp";
+import useToyproduct from "../Hook/useToyProduct";
 
 const AllToy = () => {
   useEffect(() => {
