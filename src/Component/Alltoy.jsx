@@ -11,16 +11,19 @@ const AllToy = () => {
   const { toyP, loading } = useToyproduct();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredToys, setFilteredToys] = useState([]);
+  console.log(searchTerm);
 
   useEffect(() => {
-    setFilteredToys(toyP);
+    // Fix 1: toyP যদি undefined হয়, তাহলে empty array [] সেট হবে (Crash করবে না)
+    setFilteredToys(toyP || []); 
   }, [toyP]);
 
   const handleSearch = (e) => {
     const value = e.target.value.toLowerCase();
     setSearchTerm(value);
 
-    const filtered = toyP.filter(
+    // toyP যেন undefined না হয় সে জন্য 'toyP || []' ব্যবহার করা হয়েছে
+    const filtered = (toyP || []).filter(
       (toy) => toy.toyName && toy.toyName.toLowerCase().includes(value)
     );
     setFilteredToys(filtered);
@@ -41,9 +44,19 @@ const AllToy = () => {
         Explore all the Toy
       </p>
 
+      {/* Fix 2: Search Input Field Added Here */}
+      <div className="mt-5">
+        <input 
+          type="text" 
+          placeholder="Search toy by name..." 
+          className="p-2 rounded-md w-1/2 text-black"
+          onChange={handleSearch} 
+        />
+      </div>
 
       <div className="mt-10">
-        {filteredToys.length > 0 ? (
+        {/* Fix 3: Added Optional Chaining (?) to prevent crash */}
+        {filteredToys?.length > 0 ? (
           <AllToys toy={filteredToys}></AllToys>
         ) : (
           <h2 className="text-center text-red-400 font-semibold text-xl mt-10">
