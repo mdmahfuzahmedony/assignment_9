@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Component/Custom.css";
 import AllToys from "./AllToys";
-import useToyproduct from "../Hook/useToyProduct";
+import useToyproduct from "../Hook/temp";
 
 const AllToy = () => {
   useEffect(() => {
@@ -15,7 +15,7 @@ const AllToy = () => {
 
   useEffect(() => {
     // Fix 1: toyP যদি undefined হয়, তাহলে empty array [] সেট হবে (Crash করবে না)
-    setFilteredToys(toyP || []); 
+    setFilteredToys(toyP || []);
   }, [toyP]);
 
   const handleSearch = (e) => {
@@ -46,11 +46,11 @@ const AllToy = () => {
 
       {/* Fix 2: Search Input Field Added Here */}
       <div className="mt-5">
-        <input 
-          type="text" 
-          placeholder="Search toy by name..." 
+        <input
+          type="text"
+          placeholder="Search toy by name..."
           className="p-2 rounded-md w-1/2 text-black"
-          onChange={handleSearch} 
+          onChange={handleSearch}
         />
       </div>
 
@@ -60,7 +60,7 @@ const AllToy = () => {
           <AllToys toy={filteredToys}></AllToys>
         ) : (
           <h2 className="text-center text-red-400 font-semibold text-xl mt-10">
-             No toys found matching
+            No toys found matching
           </h2>
         )}
       </div>
