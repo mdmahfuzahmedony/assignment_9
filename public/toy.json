@@ -7,9 +7,15 @@
     "price": 49.99,
     "rating": 4.7,
     "availableQuantity": 75,
-    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
     "pictureURL": "https://i.ibb.co.com/DgzVbFFb/images-15.jpg",
-    "subCategory": "Building Blocks"
+    "subCategory": "Building Blocks",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 5.00, "time": "3-5 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+      { "user": "Rahim", "rating": 5, "comment": "Amazing set for kids!" },
+      { "user": "Karim", "rating": 4, "comment": "Good but expensive." }
+    ]
   },
   {
     "toyId": 2,
@@ -19,9 +25,14 @@
     "price": 199.99,
     "rating": 4.8,
     "availableQuantity": 25,
-    "description": "The ultimate dollhouse with three floors, eight rooms, a working elevator, and a pool with a slide. Includes over 70 accessories.",
+    "description": "The ultimate dollhouse with three floors, eight rooms, a working elevator, and a pool.",
     "pictureURL": "https://i.ibb.co.com/W45Vg8Kp/images-14.jpg",
-    "subCategory": "Dolls"
+    "subCategory": "Dolls",
+    "warranty": "1 Year Service Warranty",
+    "deliveryInfo": { "cost": 10.00, "time": "5-7 Days", "location": "Chittagong, Bangladesh" },
+    "reviews": [
+      { "user": "Sadia", "rating": 5, "comment": "My daughter loves it!" }
+    ]
   },
   {
     "toyId": 3,
@@ -31,9 +42,12 @@
     "price": 5.49,
     "rating": 4.9,
     "availableQuantity": 250,
-    "description": "A pack of five detailed 1:64 scale Hot Wheels cars. Styles may vary. Perfect for collectors and kids alike.",
+    "description": "A pack of five detailed 1:64 scale Hot Wheels cars. Styles may vary.",
     "pictureURL": "https://i.ibb.co.com/jknb4ncX/images-13.jpg",
-    "subCategory": "Toy Cars"
+    "subCategory": "Toy Cars",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 2.00, "time": "2-4 Days", "location": "Sylhet, Bangladesh" },
+    "reviews": []
   },
   {
     "toyId": 4,
@@ -43,9 +57,15 @@
     "price": 12.99,
     "rating": 4.6,
     "availableQuantity": 120,
-    "description": "Fire and strike fast with this quick-draw blaster! It has a 6-dart rotating drum and comes with 6 Elite darts.",
+    "description": "Fire and strike fast with this quick-draw blaster!",
     "pictureURL": "https://i.ibb.co.com/7xKg7b11/images-12.jpg",
-    "subCategory": "Action Toys"
+    "subCategory": "Action Toys",
+    "warranty": "7 Days Replacement",
+    "deliveryInfo": { "cost": 3.50, "time": "3-5 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+      { "user": "Tanvir", "rating": 4, "comment": "Shoots far, good quality." },
+      { "user": "Noyon", "rating": 5, "comment": "Best nerf gun." }
+    ]
   },
   {
     "toyId": 5,
@@ -55,21 +75,29 @@
     "price": 14.99,
     "rating": 4.5,
     "availableQuantity": 90,
-    "description": "Squeeze, shape, and create! The Fun Factory tool squeezes out 10 different shapes and comes with two 5-ounce cans of Play-Doh.",
+    "description": "Squeeze, shape, and create! The Fun Factory tool squeezes out 10 different shapes.",
     "pictureURL": "https://i.ibb.co.com/s04TGZ4/images-11.jpg",
-    "subCategory": "Arts & Crafts"
+    "subCategory": "Arts & Crafts",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 3.00, "time": "3-5 Days", "location": "Rajshahi, Bangladesh" },
+    "reviews": [
+       { "user": "Mimi", "rating": 5, "comment": "Very creative toy." }
+    ]
   },
   {
     "toyId": 6,
-    "toyName": "National Geographic Mega ",
+    "toyName": "National Geographic Mega",
     "sellerName": "Gadget Gizmos",
     "sellerEmail": "support@gadgetgizmos.co",
     "price": 29.99,
     "rating": 4.7,
     "availableQuantity": 40,
-    "description": "Grow amazing crystals in 8 different colors! This science kit includes a night light display stand to show off your creations.",
+    "description": "Grow amazing crystals in 8 different colors! This science kit includes a night light.",
     "pictureURL": "https://i.ibb.co.com/FM8LbWw/images-10.jpg",
-    "subCategory": "Educational Toys"
+    "subCategory": "Educational Toys",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 4.00, "time": "4-6 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": []
   },
   {
     "toyId": 7,
@@ -79,9 +107,14 @@
     "price": 22.95,
     "rating": 4.8,
     "availableQuantity": 60,
-    "description": "A 6-inch scale collectible Iron Man action figure with premium design, detail, and articulation for posing and display.",
+    "description": "A 6-inch scale collectible Iron Man action figure with premium design.",
     "pictureURL": "https://i.ibb.co.com/CZfzdQC/images-1.jpg",
-    "subCategory": "Action Figures"
+    "subCategory": "Action Figures",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 3.00, "time": "3-5 Days", "location": "Khulna, Bangladesh" },
+    "reviews": [
+      { "user": "MarvelFan", "rating": 5, "comment": "Excellent detail!" }
+    ]
   },
   {
     "toyId": 8,
@@ -91,9 +124,14 @@
     "price": 20.99,
     "rating": 4.6,
     "availableQuantity": 110,
-    "description": "The classic fast-dealing property trading game. Buy, sell, dream, and scheme your way to riches. For 2 to 8 players.",
+    "description": "The classic fast-dealing property trading game. For 2 to 8 players.",
     "pictureURL": "https://i.ibb.co.com/4gK3h4ZG/images-9.jpg",
-    "subCategory": "Board Game"
+    "subCategory": "Board Game",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 3.50, "time": "3-5 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+        { "user": "Player1", "rating": 4, "comment": "Classic game, always fun." }
+    ]
   },
   {
     "toyId": 9,
@@ -103,9 +141,14 @@
     "price": 159.99,
     "rating": 4.9,
     "availableQuantity": 15,
-    "description": "Build the iconic Corellian freighter from the Star Wars saga. Includes 7 minifigures and detailed interior sections.",
+    "description": "Build the iconic Corellian freighter from the Star Wars saga.",
     "pictureURL": "https://i.ibb.co.com/BKfQ8bXt/images-8.jpg",
-    "subCategory": "Building Blocks"
+    "subCategory": "Building Blocks",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 8.00, "time": "5-7 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+        { "user": "StarWarsFan", "rating": 5, "comment": "Masterpiece!" }
+    ]
   },
   {
     "toyId": 10,
@@ -115,9 +158,14 @@
     "price": 35.50,
     "rating": 4.4,
     "availableQuantity": 55,
-    "description": "This RC car can perform 360-degree spins and flips. It features durable tires and a rechargeable battery for endless fun.",
+    "description": "This RC car can perform 360-degree spins and flips.",
     "pictureURL": "https://i.ibb.co.com/kVs5V5Rd/licensed-image-2.jpg",
-    "subCategory": "Toy Cars"
+    "subCategory": "Toy Cars",
+    "warranty": "6 Months Motor Warranty",
+    "deliveryInfo": { "cost": 4.50, "time": "3-5 Days", "location": "Barisal, Bangladesh" },
+    "reviews": [
+        { "user": "DriverX", "rating": 4, "comment": "Fast car, battery lasts 20 mins." }
+    ]
   },
   {
     "toyId": 11,
@@ -127,9 +175,12 @@
     "price": 24.99,
     "rating": 4.8,
     "availableQuantity": 80,
-    "description": "A portable art studio with 140 pieces, including crayons, colored pencils, markers, and paper. Everything needed to create a masterpiece.",
+    "description": "A portable art studio with 140 pieces, including crayons and pencils.",
     "pictureURL": "https://i.ibb.co.com/R4v3XtFT/images-7.jpg",
-    "subCategory": "Arts & Crafts"
+    "subCategory": "Arts & Crafts",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 3.00, "time": "3-5 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": []
   },
   {
     "toyId": 12,
@@ -139,9 +190,14 @@
     "price": 19.99,
     "rating": 4.9,
     "availableQuantity": 150,
-    "description": "An ultra-soft and huggable 12-inch plush teddy bear. Made from high-quality materials for a lifetime of cuddles.",
+    "description": "An ultra-soft and huggable 12-inch plush teddy bear.",
     "pictureURL": "https://i.ibb.co.com/xS9TggRC/images-6.jpg",
-    "subCategory": "Stuffed Animals"
+    "subCategory": "Stuffed Animals",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 3.00, "time": "3-5 Days", "location": "Rangpur, Bangladesh" },
+    "reviews": [
+        { "user": "CuteLover", "rating": 5, "comment": "So soft!" }
+    ]
   },
   {
     "toyId": 13,
@@ -151,33 +207,44 @@
     "price": 9.99,
     "rating": 4.7,
     "availableQuantity": 300,
-    "description": "The classic family card game that's easy to learn and so much fun to play! Race to get rid of all your cards.",
+    "description": "The classic family card game that's easy to learn.",
     "pictureURL": "https://i.ibb.co.com/tTxd2QgW/licensed-image-1.jpg",
-    "subCategory": "Board Games"
+    "subCategory": "Board Games",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 1.50, "time": "2-3 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": []
   },
   {
     "toyId": 14,
-    "toyName": "Fisher-Price Laugh & Learn Smart Stages Puppy",
+    "toyName": "Fisher-Price Laugh & Learn",
     "sellerName": "Funtime Emporium",
     "sellerEmail": "sales@funtimeemporium.com",
     "price": 22.99,
     "rating": 4.8,
     "availableQuantity": 65,
-    "description": "An interactive plush puppy that introduces over 100 first words, parts of the body, colors and more with fun songs and phrases.",
+    "description": "An interactive plush puppy that introduces over 100 first words.",
     "pictureURL": "https://i.ibb.co.com/KxqYmLPw/images-5.jpg",
-    "subCategory": "Educational Toys"
+    "subCategory": "Educational Toys",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 3.50, "time": "3-5 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+         { "user": "Mom123", "rating": 5, "comment": "Great for learning." }
+    ]
   },
   {
     "toyId": 15,
-    "toyName": "Little Tikes Easy Score Basketball Set",
+    "toyName": "Little Tikes Basketball Set",
     "sellerName": "Play World",
     "sellerEmail": "info@playworld.com",
     "price": 34.99,
     "rating": 4.6,
     "availableQuantity": 45,
-    "description": "An adjustable-height basketball hoop for toddlers and preschoolers. Includes an oversized rim and a junior-sized basketball.",
+    "description": "An adjustable-height basketball hoop for toddlers.",
     "pictureURL": "https://i.ibb.co.com/rRWgTM69/images-4.jpg",
-    "subCategory": "Action Toys"
+    "subCategory": "Action Toys",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 5.00, "time": "4-6 Days", "location": "Chittagong, Bangladesh" },
+    "reviews": []
   },
   {
     "toyId": 16,
@@ -187,33 +254,46 @@
     "price": 59.99,
     "rating": 4.5,
     "availableQuantity": 30,
-    "description": "A high-definition video camera kit for kids. Includes a green screen and 20+ animated backgrounds to create amazing videos.",
+    "description": "A high-definition video camera kit for kids.",
     "pictureURL": "https://i.ibb.co.com/h1MHKNjN/images-3.jpg",
-    "subCategory": "Educational Toys"
+    "subCategory": "Educational Toys",
+    "warranty": "1 Year Official Warranty",
+    "deliveryInfo": { "cost": 4.00, "time": "3-5 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+        { "user": "VloggerKid", "rating": 5, "comment": "Awesome camera!" }
+    ]
   },
   {
     "toyId": 17,
-    "toyName": "Melissa & Doug Wooden Blocks Set",
+    "toyName": "Melissa & Doug Wooden Blocks",
     "sellerName": "Kids Corner",
     "sellerEmail": "orders@kidscorner.com",
     "price": 21.99,
     "rating": 4.9,
     "availableQuantity": 100,
-    "description": "A set of 100 solid wood blocks in four colors and nine shapes. A classic creative and educational activity for kids.",
+    "description": "A set of 100 solid wood blocks in four colors.",
     "pictureURL": "https://i.ibb.co.com/Kj097b0G/images-2.jpg",
-    "subCategory": "Building Blocks"
+    "subCategory": "Building Blocks",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 4.50, "time": "3-5 Days", "location": "Mymensingh, Bangladesh" },
+    "reviews": []
   },
   {
     "toyId": 18,
-    "toyName": "Ravensburger 1000pc Jigsaw Puzzle",
+    "toyName": "Ravensburger 1000pc Puzzle",
     "sellerName": "The Toy Chest",
     "sellerEmail": "support@thetoychest.net",
     "price": 18.99,
     "rating": 4.8,
     "availableQuantity": 85,
-    "description": "A high-quality 1000-piece puzzle featuring a beautiful landscape. Softclick technology means pieces fit together perfectly.",
+    "description": "A high-quality 1000-piece puzzle featuring a landscape.",
     "pictureURL": "https://i.ibb.co.com/Kp5zwJg8/images-1.jpg",
-    "subCategory": "Puzzles"
+    "subCategory": "Puzzles",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 2.50, "time": "3-5 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+        { "user": "PuzzleMaster", "rating": 5, "comment": "Very hard but fun." }
+    ]
   },
   {
     "toyId": 19,
@@ -223,9 +303,14 @@
     "price": 11.99,
     "rating": 4.7,
     "availableQuantity": 130,
-    "description": "Your friendly neighborhood Spider-Man as a stylized Pop! vinyl figure from Funko. Stands 3.75 inches tall.",
+    "description": "Your friendly neighborhood Spider-Man vinyl figure.",
     "pictureURL": "https://i.ibb.co.com/WmnwknN/images.jpg",
-    "subCategory": "Action Figures"
+    "subCategory": "Action Figures",
+    "warranty": "No Warranty",
+    "deliveryInfo": { "cost": 2.00, "time": "2-4 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+        { "user": "SpideyFan", "rating": 5, "comment": "Looks cool." }
+    ]
   },
   {
     "toyId": 20,
@@ -235,8 +320,13 @@
     "price": 109.99,
     "rating": 4.8,
     "availableQuantity": 20,
-    "description": "The original, full-sized, all-steel wagon with a seamless body, no-scratch edges, and an extra-long handle that folds under for easy storage.",
+    "description": "The original, full-sized, all-steel wagon.",
     "pictureURL": "https://i.ibb.co.com/4ZPFPNWL/licensed-image.jpg",
-    "subCategory": "Action Toys"
+    "subCategory": "Action Toys",
+    "warranty": "Lifetime Body Warranty",
+    "deliveryInfo": { "cost": 15.00, "time": "5-7 Days", "location": "Dhaka, Bangladesh" },
+    "reviews": [
+        { "user": "BigDad", "rating": 5, "comment": "Classic wagon, very strong." }
+    ]
   }
 ]

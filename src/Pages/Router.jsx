@@ -8,6 +8,8 @@ import AllToy from "../Component/Alltoy";
 import PrivateRoute from "../Privet/PrivetRouter";
 import MyProfile from "../Component/MyProfile";
 import Error from "../Pages/Error";
+import Blog from "./Blog";
+import AboutUs from "./Aboutus";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ export const router = createBrowserRouter([
         Component: AllToy,
       },
       {
+        path: "/blogs",
+        Component: Blog
+      },
+      {
+        path: "/about",
+        Component:AboutUs
+      },
+      {
         path: "/myprofile",
         Component: () => (
           <PrivateRoute>
@@ -46,9 +56,9 @@ export const router = createBrowserRouter([
       {
         path: "/toys/:id",
         Component: () => (
-          <PrivateRoute>
+         
             <ToyDetails></ToyDetails>
-          </PrivateRoute>
+         
         ),
       },
     ],

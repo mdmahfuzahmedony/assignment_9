@@ -11,10 +11,10 @@ const Footer = () => {
 
   return (
     // Main Footer Background (Darker Purple to match Header)
-    <footer className="bg-purple-900 text-white pt-16 pb-8 border-t border-purple-800">
+    <footer className="bg-gray-900 text-white pt-16 pb-8 border-t border-purple-800">
       
       {/* Container aligned with Header (1400px) */}
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
@@ -32,19 +32,19 @@ const Footer = () => {
             
             {/* Social Icons (White to Yellow Hover) */}
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
+              <a href="https://www.facebook.com/mahfuzahmedony" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
                 <FaFacebookF className="w-4 h-4" />
               </a>
-              <a href="https://x.com/" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
+              <a href="https://x.com/MahfuzAhmedOny" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
                 <FaTwitter className="w-4 h-4" />
               </a>
-              <a href="https://www.instagram.com/" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
+              <a href="https://www.instagram.com/mahfuzahmedony/?__pwa=1" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
                 <FaInstagram className="w-4 h-4" />
               </a>
-              <a href="#" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
+              <a href="https://www.linkedin.com/in/mahfuzahmedony/" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
                 <FaLinkedinIn className="w-4 h-4" />
               </a>
-              <a href="https://www.youtube.com/" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
+              <a href="https://www.youtube.com/@obogoto" className="bg-purple-800 p-2 rounded-full text-white hover:text-yellow-400 hover:bg-purple-700 transition duration-300">
                 <FaYoutube className="w-4 h-4" />
               </a>
             </div>
@@ -56,7 +56,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-300 hover:text-yellow-400 hover:translate-x-1 transition-all inline-block text-sm">Privacy policy</a></li>
               <li><a href="#" className="text-gray-300 hover:text-yellow-400 hover:translate-x-1 transition-all inline-block text-sm">Terms and conditions</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-yellow-400 hover:translate-x-1 transition-all inline-block text-sm">Toy Land News</a></li>
+              <li><a href="/blogs" className="text-gray-300 hover:text-yellow-400 hover:translate-x-1 transition-all inline-block text-sm">Toy Land News</a></li>
               <li><a href="#" className="text-gray-300 hover:text-yellow-400 hover:translate-x-1 transition-all inline-block text-sm">Sustainability</a></li>
               <li><a href="#" className="text-gray-300 hover:text-yellow-400 hover:translate-x-1 transition-all inline-block text-sm">Supply Chain</a></li>
             </ul>

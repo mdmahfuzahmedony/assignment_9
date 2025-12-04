@@ -91,10 +91,10 @@ const Header = () => {
 
   return (
     // Sticky header with Full Width Purple Background
-    <div className="sticky top-0 z-50 bg-purple-700 shadow-lg transition-all duration-300">
+    <div className="sticky  top-0 z-50 bg-purple-700 shadow-lg transition-all duration-300">
       
       {/* Inner Content Centered with max-w-1400px */}
-      <div className="max-w-[1400px] mx-auto px-4">
+      <div className="max-w-[1600px] mx-auto px-4">
         <div className="navbar min-h-[4rem]">
           
           {/* Navbar Start - Logo & Mobile Menu */}
@@ -181,7 +181,7 @@ const Header = () => {
                 )}
                 <button
                   onClick={handleLogOut}
-                  className="btn border-none bg-red-500 text-white hover:bg-red-600 btn-sm md:btn-md"
+                  className="btn border-none bg-yellow-500 text-black hover:bg-red-600 btn-sm md:btn-md"
                 >
                   Logout
                 </button>

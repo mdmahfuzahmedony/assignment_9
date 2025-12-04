@@ -41,37 +41,6 @@ const AllToy = () => {
         Explore all the Toy
       </p>
 
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8 max-w-[1300px] mx-auto">
-        <p className="text-white font-medium">
-          <span className="text-white">({filteredToys.length})</span> Toy Found
-        </p>
-
-        <div className="relative w-full border-red-300 border-1 rounded-lg md:w-80 max-w-[1300px]">
-          <input
-            type="search"
-            value={searchTerm}
-            onChange={handleSearch}
-            placeholder="Search by Toy Name..."
-            className="w-full text-white py-2 pl-10 pr-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-          />
-          <svg
-            className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <g
-              strokeLinejoin="round"
-              strokeLinecap="round"
-              strokeWidth="2.5"
-              fill="none"
-              stroke="currentColor"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.3-4.3"></path>
-            </g>
-          </svg>
-        </div>
-      </div>
 
       <div className="mt-10">
         {filteredToys.length > 0 ? (
